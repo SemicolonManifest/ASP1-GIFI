@@ -1,0 +1,3 @@
+class LecturePromotion < ApplicationRecord
+
+end

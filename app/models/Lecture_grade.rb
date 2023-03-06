@@ -1,0 +1,3 @@
+class LectureGrade < ApplicationRecord
+
+end

@@ -1,0 +1,3 @@
+class PersonPromotion < ApplicationRecord
+
+end

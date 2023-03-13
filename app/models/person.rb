@@ -1,5 +1,4 @@
-class Person < ApplicationRecord
-  self.abstract_class = true
+class User < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true

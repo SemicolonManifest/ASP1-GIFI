@@ -4,6 +4,7 @@ class Grade < ApplicationRecord
   belongs_to :teacher
   belongs_to :promotion
   belongs_to :semester
+  belongs_to :lecture
 
   validates :name, presence: true
   validates :result, presence: true, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 6 }

@@ -56,19 +56,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_130943) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "persons", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "email"
-    t.string "phone"
-    t.string "type"
+  create_table "persons_promotions", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+    t.integer "promotion_id"
+    t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "persons_promotions", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
-    t.integer "promotion_id"
-    t.integer "person_id"
+  create_table "profiles", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,6 +81,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_130943) do
 
   create_table "semesters", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

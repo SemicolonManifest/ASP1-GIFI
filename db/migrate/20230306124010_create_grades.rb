@@ -9,6 +9,7 @@ class CreateGrades < ActiveRecord::Migration[7.0]
       t.integer :promotion_id
       t.integer :student_id
       t.integer :teacher_id
+      t.integer :lecture_id
       
       t.timestamps
     end
